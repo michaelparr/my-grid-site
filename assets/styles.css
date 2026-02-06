@@ -1,0 +1,204 @@
+:root{
+  --bg: #ffffff;
+  --text: #000;
+  --postText: #000;
+  --postBg: #eaeaea;
+  --overlayBg: rgba(234,234,234,0.95);
+  --max: 1180px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: Karla, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a{ color: inherit; text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+.wrapper{ min-height:100%; }
+.container{
+  width: min(var(--max), calc(100% - 40px));
+  margin: 0 auto;
+}
+.container--l{ padding-bottom: 60px; }
+
+.header{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  padding: 22px 0 10px;
+  gap: 20px;
+}
+.header__logo{
+  margin:0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.site-logo{ height: 18px; vertical-align:middle; margin-right:10px; }
+.site-title{ vertical-align:middle; }
+
+.header__nav{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap: 14px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.blog-title{ margin:0; font-size:16px; }
+.back_button{ font-weight:700; }
+
+.posts{
+  margin-top: 10px;
+}
+
+/* Masonry items */
+.post{
+  width: 280px;
+  margin-bottom: 18px;
+}
+@media (max-width: 767px){
+  .post{ width: calc(100vw - 40px); }
+}
+
+.post__photo img,
+.post__video iframe,
+.post__audio iframe{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.post__text,
+.post__quote,
+.post__link,
+.post__chat,
+.post__video,
+.post__audio{
+  background: var(--postBg);
+  color: var(--postText);
+  padding: 18px;
+}
+
+.post__photo{ background: transparent; }
+
+.text__title,
+.link__title,
+.chat__title{
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+blockquote{
+  margin: 0;
+  padding-left: 14px;
+  border-left: 2px solid rgba(0,0,0,0.35);
+}
+
+.post__bottom{
+  padding: 8px 0 0;
+  font-size: 11px;
+  opacity: 0.9;
+}
+.post__buttons{
+  list-style:none;
+  margin: 0;
+  padding: 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+}
+.post__buttons a{ text-decoration: underline; text-decoration-thickness: 1px; }
+
+.pagination{
+  display:flex;
+  justify-content:center;
+  margin: 18px 0 0;
+}
+.pagination__next{
+  font: inherit;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 10px 14px;
+  background: transparent;
+  cursor:pointer;
+}
+
+.footer{
+  margin-top: 30px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.bottom__copyright{
+  position: fixed;
+  font-size: 10px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+}
+
+/* Overlay filter */
+.overlay{
+  position: fixed;
+  inset: 0;
+  background: var(--overlayBg);
+  display:none;
+  z-index: 10;
+  padding: 24px;
+}
+.overlay.is-open{ display:block; }
+.overlay__nav{
+  list-style:none;
+  margin: 40px 0 0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  font-size: 14px;
+}
+.filter__toggle--mobile{
+  display:inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* Load overlay */
+.load-overlay{
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index: 50;
+}
+.load-overlay.is-hidden{ display:none; }
+
+.logo{ width: 56px; height: 56px; }
+.pulse{
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{ transform: scale(1); opacity:0.55; }
+  50%{ transform: scale(1.06); opacity:1; }
+}
+
+/* Permalink page background like the Tumblr theme */
+body.page-permalink{
+  background: var(--postBg);
+}
+.posts--single .post{
+  width: min(880px, calc(100vw - 40px));
+  margin: 22px auto;
+}
