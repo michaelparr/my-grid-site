@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "My Grid Site",
+    "description": "Put your site description here."
+  },
+  "tags": [
+    { "slug": "work", "title": "Work" },
+    { "slug": "photos", "title": "Photos" },
+    { "slug": "writing", "title": "Writing" }
+  ],
+  "posts": [
+    {
+      "id": "welcome",
+      "type": "text",
+      "title": "Welcome",
+      "date": "2026-02-06",
+      "tags": ["writing"],
+      "html": "<p>This is a <strong>static</strong> remake of a Tumblr grid theme for GitHub Pages.</p>"
+    },
+    {
+      "id": "p1",
+      "type": "photo",
+      "date": "2026-02-05",
+      "tags": ["photos"],
+      "image": "https://via.placeholder.com/800x600?text=Sample+Photo",
+      "alt": "Sample photo",
+      "captionHtml": "<p>Optional caption goes here.</p>"
+    },
+    {
+      "id": "q1",
+      "type": "quote",
+      "date": "2026-02-01",
+      "tags": ["writing"],
+      "quote": "Order without design.",
+      "source": "Alain Bertaud"
+    },
+    {
+      "id": "l1",
+      "type": "link",
+      "date": "2026-01-20",
+      "tags": ["work"],
+      "name": "My project link",
+      "url": "https://example.com",
+      "descriptionHtml": "<p>A short description.</p>"
+    }
+  ]
+}
