@@ -43,5 +43,32 @@
       "url": "https://example.com",
       "descriptionHtml": "<p>A short description.</p>"
     }
-  ]
+  
+  , {
+    "id": "dummy-photo1",
+    "type": "photo",
+    "date": "2026-02-06",
+    "tags": ["photos"],
+    "image": "https://via.placeholder.com/800x600?text=Dummy+Photo1",
+    "alt": "Dummy Photo 1",
+    "captionHtml": "<p>Dummy photo 1 caption.</p>"
+  },
+  {
+    "id": "dummy-text1",
+    "type": "text",
+    "date": "2026-02-06",
+    "tags": ["writing"],
+    "title": "Dummy Text",
+    "html": "<p>This is a dummy text post.</p>"
+  },
+  {
+    "id": "dummy-photo2",
+    "type": "photo",
+    "date": "2026-02-06",
+    "tags": ["photos"],
+    "image": "https://via.placeholder.com/800x600?text=Dummy+Photo2",
+    "alt": "Dummy Photo 2",
+    "captionHtml": "<p>Dummy photo 2 caption.</p>"
+  }
+]
 }
